@@ -38,5 +38,17 @@ int main()
 
     unsigned short int benis2 = 65535; // 2 bytes (0 to 65,535) %d
 
+    int benis3 = 2147483647; // 4 bytes (-2,147,483,648 to 2,147,483,647) %d
+
+    unsigned int benis4 = 4294967295; // 4 bytes (0 to 4,294,967,295) %u
+
+    long long int benis5 = 9223372036854775807; // 8 bytes (0 to 9,223,372,036,854,775,807) %lld
+
+    unsigned long long int mybenis = 18446744073709551615U; // 8 bytes (0 to 18,446,744,073,709,551,615) %llu
+
+    // --Arithmatic operations--
+
+    float yuh = 12 / (float)5; // Put float after / when dividing by ints to convert to float
+
     return 0; // Will return 0 if there are no errors, otherwise will return 1
 }
