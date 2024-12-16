@@ -7,6 +7,8 @@ int main()
     int num1;
     int num2;
 
+    printf("\n balls");
+
     printf("\nInput the first number for your operation: ");
     scanf("%d", &num1);
 
