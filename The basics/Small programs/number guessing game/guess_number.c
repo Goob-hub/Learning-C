@@ -8,7 +8,7 @@ int main() {
     const int MIN = 1;
     const int MAX = 100;
     int guessesLeft = 10;
-    int answer = randomNum(MAX, 0);
+    int answer = randomNum(MAX, MIN);
 
     int input;
 
