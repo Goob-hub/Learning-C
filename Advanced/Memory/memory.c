@@ -12,7 +12,7 @@ int main() {
     printf("%d bytes\n", sizeof(a));
     printf("%d bytes\n", sizeof(b));
 
-    // Memory addresses are made up of num 1-9 and letters a-f (Hexidecimal)
+    // Memory addresses are made up of num 1-9 and letters A-F (Hexidecimal)
     printf("Memory address %p\n", a);
     printf("Memory address %p\n", b);
 
