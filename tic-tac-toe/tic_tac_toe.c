@@ -16,6 +16,7 @@ int main() {
     char board[3][3] = {{' ', ' ', ' '},{' ', ' ', ' '},{' ', ' ', ' '}};
     bool validMove = true;
     bool gameOver = false;
+    int turnsMade = 0;
     int coordinates[2];
     int winner = -1;
 
@@ -38,11 +39,11 @@ int main() {
 
         } while (!validMove);
 
+        turnsMade++;
+
         winner = checkForWinner(board);
 
-        if(winner != -1) {
-            break;
-        }
+        if(winner != -1 || turnsMade == 9) { break; }
 
         coordinates[0] = 0;
         coordinates[1] = 0;
@@ -63,6 +64,10 @@ int main() {
             validMove = updateBoard(false, coordinates, board);
 
         } while (!validMove);
+
+        turnsMade++;
+
+        if(turnsMade == 9) { break; }
 
         winner = checkForWinner(board);
     } while (winner == -1);
@@ -91,7 +96,7 @@ void displayBoard(char board[3][3]) {
 void playerInput(int coordinates[2]) {
     do
     {
-        printf("Enter column (#1-3): ");
+        printf("Enter row (#1-3): ");
 
         if (scanf("%d", &coordinates[0]) != 1) {
             printf("Invalid input. Please enter a number.\n");
@@ -104,7 +109,7 @@ void playerInput(int coordinates[2]) {
 
     do
     {
-        printf("\nEnter row (#1-3): ");
+        printf("\nEnter column (#1-3): ");
         
         if (scanf("%d", &coordinates[1]) != 1) {
             printf("Invalid input. Please enter a number (#1-3).\n");
